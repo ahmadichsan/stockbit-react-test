@@ -6,7 +6,6 @@ import { HistoryProps } from '../../interfaces';
 
 import { useFavoriteMoviesSelector } from '../../custom-hook';
 
-// import { Search } from '../search';
 import { AutoCompleteSearch } from '../autocomplete-search';
 
 import './TopBar.scss';
@@ -36,13 +35,18 @@ function NavigationBar(props: HistoryProps) {
           </Col>
 
           <Col lg={8} md={8} sm={8} xs={12} className="m-0 p-0 d-flex align-items-center">
-            {/* <Search /> */}
             <AutoCompleteSearch />
           </Col>
 
           <Col lg={2} md={2} sm={2} xs={12} className="m-0 p-0">
             <Nav className="ml-auto d-flex justify-content-end h-100" navbar>
               <NavItem className="navbar-navitem ps-2 pe-2" active={path.includes('#projects')}>
+                <img
+                  src={`${process.env.PUBLIC_URL}/tmdb.png`}
+                  alt="tmdb.svg"
+                  className="me-4 ms-4 tmdb-img"
+                />
+
                 <Link to="/favorites">
                   <div className="fav-container">
                     <i className="fa fa-heart" />

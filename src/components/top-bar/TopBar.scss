@@ -25,7 +25,7 @@
 
     .fa.fa-heart {
       font-size: 24px;
-  
+
       &:hover {
         color: red;
       }
@@ -51,6 +51,11 @@
   .navbar.navbar-dark .navbar-toggler-icon {
     background-image: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'><path stroke='rgba(244,205,72,1)' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22' /></svg>");
   }
+
+  .tmdb-img {
+    object-fit: cover;
+    width: 50%;
+  }
 }
 
 @media (min-width: 700px) and (max-width: 1024px) {
@@ -66,6 +71,14 @@
 @media (max-width: 575px) {
   .fav-container {
     margin-top: 10px;
+  }
+
+  .navbar-wrapper {
+    .tmdb-img {
+      width: 20%;
+      margin-top: 10px;
+      margin-left: 0px !important;
+    }
   }
 }
 
