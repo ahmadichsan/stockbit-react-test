@@ -7,7 +7,7 @@ import { QuerySearch } from '../../interfaces';
 
 import { MovieCard } from '../../components';
 
-import { getDataSearch, qsParse } from '../../helpers';
+import { getDataNowPlaying, getDataSearch, qsParse } from '../../helpers';
 
 import './LandingPage.scss';
 
@@ -24,7 +24,7 @@ class LandingPage extends Component<LandingPageProps, LandingPageState> {
     try {
       window.addEventListener('scroll', this.scrollListener, true);
 
-      this.getSearch();
+      this.getData();
     } catch (error) {
       console.log(error.message);
     }
@@ -42,7 +42,7 @@ class LandingPage extends Component<LandingPageProps, LandingPageState> {
 
       setTimeout(() => {
         this.setState({ query, page: 1, data: null, movies: [] }, () => {
-          this.getSearch();
+          this.getData();
         });
       }, 500);
     }
@@ -57,7 +57,7 @@ class LandingPage extends Component<LandingPageProps, LandingPageState> {
       const { page, data, isLoading } = this.state;
 
       if (page <= (data?.total_pages || 1) && !isLoading) {
-        this.getSearch();
+        this.getData();
         return;
       }
     }
@@ -85,29 +85,67 @@ class LandingPage extends Component<LandingPageProps, LandingPageState> {
     }
   };
 
+  getNowPlaying = async () => {
+    try {
+      const { query, page } = this.state;
+
+      if (query) return;
+
+      this.setState({ isLoading: true });
+
+      const data = await getDataNowPlaying(page);
+
+      this.setState(prevState => ({
+        isLoading: false,
+        page: page + 1,
+        data,
+        movies: [...prevState.movies, ...data.results],
+      }));
+    } catch (error) {
+      console.log(error.message);
+      this.setState({ isLoading: false });
+    }
+  };
+
+  getData = () => {
+    const { query } = this.state;
+
+    if (!query) {
+      this.getNowPlaying();
+      return;
+    }
+
+    this.getSearch();
+  }
+
   render() {
-    const { data, movies, isLoading } = this.state;
+    const { data, movies, isLoading, query } = this.state;
 
     return (
       <div
         className="p-5"
       >
-        {!data && (
-          <div>
-            Please put keyword on search box
+        {!query && (
+          <div className="mb-4">
+            <h1>
+              <b className="main-blue">Now Playing</b>
+            </h1>
           </div>
         )}
+
         {data && (
           <div
             id="search-data"
           >
-            <Row className="mb-3">
-              <Col>
-                <div>
-                  Search Results: {data.total_results} movies
-                </div>
-              </Col>
-            </Row>
+            {query && (
+              <Row className="mb-3">
+                <Col>
+                  <div>
+                    Search Results: {data.total_results} movies
+                  </div>
+                </Col>
+              </Row>
+            )}
 
             <Row className="m-0 p-0">
               {movies.map(item => {
