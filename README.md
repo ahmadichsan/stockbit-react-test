@@ -36,7 +36,7 @@ Dear HR Stockbit, the requirement to display the movie list is by using OMDBApi.
 1. git clone or download the zip file
 2. if you choose to download the zip file, once downloaded, extract the zip
 3. open the program folder with your favorite code editor
-4. create ```.env``` file in the root project by copying file ```.env.example``` and remove the ```.example``` extension. The value of the API key will (```REACT_APP_API_MOVIEDBKEY```) will be informed via email
+4. create ```.env``` file in the root project by copying file ```.env.example``` and remove the ```.example``` extension. The value of the API key (```REACT_APP_API_MOVIEDBKEY```) will be informed via email
 5. do ```npm install``` to install all dependencies
 6. do ```npm start``` to run the app. **Disclaimer**, in current condition, to display the movie list, you need to specify the movie that you are looking for in the search box. Nothing will shown if the search did not specified since the API is used for spesific search only. I will consume another API, such as Now Playing movies to be displayed if the search not specified
 
