@@ -1,3 +1,45 @@
+# Stockbit React Test for ReactJS Developer Position
+
+
+### Author
+* Name: Ahmad Ichsan Baihaqi
+* E-mail: ahmadichsanbaihaqi@gmail.com 
+
+
+### Requirements
+## Goal
+Create a simple React app for movies that consume data from http://www.omdbapi.com. API key informed via email and won't published in this README.
+
+## Features to be implemented:
+* Display List of movies
+* Use Infinite Scroll without plugin for search result with > 5
+* Search movies by keyword
+* Single Page for Single Movie Detail
+* Show Movie Poster in a popup modal window when image from the list is clicked
+* Unit test for components
+* Autocomplete searchbox implementation is a big plus
+
+## Project must use/have:
+* ReactJS
+* Redux
+* Axios
+* Good, sensible file structuring that promotes modularity and good separation of logical/UI
+layers
+* Written Test Cases for the components
+* Showing some display of React Hooks knowledge is a plus
+
+## Changing in Requirement by Author
+Dear HR Stockbit, the requirement to display the movie list is by using OMDBApi. But, unfortunately, I had trouble with the API. The pagination seems not work properly. So, I tried to use another open API with the same concept and I found TMBDApi is quite easy to use. Here is the documentation https://developers.themoviedb.org/. I hope you will be okay with this changes.
+
+
+### Step by step to run locally
+1. git clone or download the zip file
+2. if you choose to download the zip file, once downloaded, extract the zip
+3. open the program folder with your favorite code editor
+4. create ```.env``` file in the root project by copying file ```.env.example``` and remove the ```.example``` extension. The value of the API key will (```REACT_APP_API_MOVIEDBKEY```) will be informed via email
+5. do ```npm install``` to install all dependencies
+6. do ```npm start``` to run the app. **Disclaimer**, in current condition, to display the movie list, you need to specify the movie that you are looking for in the search box. Nothing will shown if the search did not specified since the API is used for spesific search only. I will consume another API, such as Now Playing movies to be displayed if the search not specified
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).

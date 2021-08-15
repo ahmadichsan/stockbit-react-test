@@ -1,0 +1,13 @@
+@import "../../scss/Variables.scss";
+
+.movie-detail {
+    .poster-movie {
+        position: relative;
+
+        .favorite-wrap {
+            position: absolute;
+            right: 20px;
+            bottom: 20px;
+        }
+    }
+}

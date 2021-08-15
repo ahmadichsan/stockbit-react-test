@@ -1,0 +1,28 @@
+@import "../../scss/Variables.scss";
+
+.search {
+    position: relative;
+
+    input {
+        &:focus {
+            box-shadow: none;
+        }
+    }
+
+    .input-group-text {
+        border-top-left-radius: 0px;
+        border-bottom-left-radius: 0px;
+        cursor: pointer;
+    }
+
+    .fa.fa-search {
+        font-size: 18px;
+        width: 20px;
+        height: 22px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border-top-left-radius: 0px;
+        border-bottom-left-radius: 0px;
+    }
+}

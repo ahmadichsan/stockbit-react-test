@@ -1,0 +1,21 @@
+/// import global scss here instead of import this local scss to global scss folder
+@import '../../scss/variables';
+
+/// create class name here
+.tooltip-react-container {
+  max-width: 300px !important;
+  z-index: 99999999 !important;
+  white-space: pre-line !important;
+}
+
+.tooltip-text-center {
+  text-align: center !important;
+}
+
+.tooltip-text-left {
+  text-align: left !important;
+}
+
+.tooltip-text-right {
+  text-align: right !important;
+}

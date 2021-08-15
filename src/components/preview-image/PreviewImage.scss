@@ -1,0 +1,46 @@
+@import "../../scss/Variables.scss";
+
+.img-prev {
+  object-fit: cover;
+  width: 100%;
+  border-radius: 10px;
+}
+
+#loading-preview::after {
+  content: "";
+  position: absolute;
+  height: 100%;
+  border-radius: 10px;
+  width: 100%;
+  animation: progress 2s infinite linear;
+}
+
+#error-img::after {
+  content: "Poster not Available";
+  position: absolute;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  border-radius: 10px;
+  background-color: #e9ecef;
+}
+
+@keyframes progress {
+  0% {
+    background: rgba(99, 111, 131, 0.5);
+  }
+  25% {
+    background: rgba(99, 111, 131, 0.7);
+  }
+  50% {
+    background: rgba(99, 111, 131, 1);
+  }
+  75% {
+    background: rgba(99, 111, 131, 0.7);
+  }
+  100% {
+    background: rgba(99, 111, 131, 0.5);
+  }
+}

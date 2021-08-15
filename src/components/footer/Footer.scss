@@ -1,0 +1,15 @@
+@import "../../scss/Variables.scss";
+
+.footer-wrapper {
+  width: 100%;
+  min-height: 123px;
+  background: $main-blue;
+  color: $main-yellow;
+  padding-left: 20%;
+  padding-right: 20%;
+
+  a {
+    color: $main-yellow;
+    text-decoration-line: none;
+  }
+}
