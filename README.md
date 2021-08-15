@@ -7,10 +7,10 @@
 
 
 ### Requirements
-## Goal
+#### Goal
 Create a simple React app for movies that consume data from http://www.omdbapi.com. API key informed via email and won't published in this README.
 
-## Features to be implemented:
+#### Features to be implemented:
 * Display List of movies
 * Use Infinite Scroll without plugin for search result with > 5
 * Search movies by keyword
@@ -19,7 +19,7 @@ Create a simple React app for movies that consume data from http://www.omdbapi.c
 * Unit test for components
 * Autocomplete searchbox implementation is a big plus
 
-## Project must use/have:
+#### Project must use/have:
 * ReactJS
 * Redux
 * Axios
@@ -28,11 +28,11 @@ layers
 * Written Test Cases for the components
 * Showing some display of React Hooks knowledge is a plus
 
-## Changing in Requirement by Author
+#### Changing in Requirement by Author
 Dear HR Stockbit, the requirement to display the movie list is by using OMDBApi. But, unfortunately, I had trouble with the API. The pagination seems not work properly. So, I tried to use another open API with the same concept and I found TMBDApi is quite easy to use. Here is the documentation https://developers.themoviedb.org/. I hope you will be okay with this changes.
 
 
-### Step by step to run locally
+#### Step by step to run locally
 1. git clone or download the zip file
 2. if you choose to download the zip file, once downloaded, extract the zip
 3. open the program folder with your favorite code editor
