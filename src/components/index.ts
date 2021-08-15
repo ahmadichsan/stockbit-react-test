@@ -9,3 +9,4 @@ export * from './movie-card';
 export * from './movie-item';
 export * from './react-tooltip-wrapper';
 export * from './favorite';
+export * from './autocomplete-search';

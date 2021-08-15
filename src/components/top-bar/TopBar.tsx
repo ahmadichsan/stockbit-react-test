@@ -6,14 +6,10 @@ import { HistoryProps } from '../../interfaces';
 
 import { useFavoriteMoviesSelector } from '../../custom-hook';
 
-import { Search } from '../search';
+// import { Search } from '../search';
+import { AutoCompleteSearch } from '../autocomplete-search';
 
 import './TopBar.scss';
-
-/**
- * TODO ICHSAN
- * INI BELUM SMOOTH TRANSISI COLLAPSE NYA
- */
 
 function NavigationBar(props: HistoryProps) {
   const { favoriteMovies } = useFavoriteMoviesSelector();
@@ -40,7 +36,8 @@ function NavigationBar(props: HistoryProps) {
           </Col>
 
           <Col lg={8} md={8} sm={8} xs={12} className="m-0 p-0 d-flex align-items-center">
-            <Search />
+            {/* <Search /> */}
+            <AutoCompleteSearch />
           </Col>
 
           <Col lg={2} md={2} sm={2} xs={12} className="m-0 p-0">

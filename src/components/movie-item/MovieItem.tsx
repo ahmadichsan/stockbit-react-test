@@ -31,10 +31,6 @@ function MovieItem(props: MovieItemProps) {
 
   const { result } = useConfigMovieSelector();
 
-  /**
-   * TODO ICHSAN
-   * nanti cek loading spinner nya
-   */
   if (!result) return <div>Waiting for movie config...</div>;
 
   const posterSize = isPosterMode ? "original" : "w185";
