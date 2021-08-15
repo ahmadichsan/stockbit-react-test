@@ -32,13 +32,16 @@ layers
 Dear HR Stockbit, the requirement to display the movie list is by using OMDBApi. But, unfortunately, I had trouble with the API. The pagination seems not work properly. So, I tried to use another open API with the same concept and I found TMBDApi is quite easy to use. Here is the documentation https://developers.themoviedb.org/. I hope you will be okay with this changes.
 
 
-#### Step by step to run locally
+#### Step by step to Run Locally
 1. git clone or download the zip file
 2. if you choose to download the zip file, once downloaded, extract the zip
 3. open the program folder with your favorite code editor
 4. create ```.env``` file in the root project by copying file ```.env.example``` and remove the ```.example``` extension. The value of the API key (```REACT_APP_API_MOVIEDBKEY```) will be informed via email
 5. do ```npm install``` to install all dependencies
 6. do ```npm start``` to run the app. **Disclaimer**, in current condition, to display the movie list, you need to specify the movie that you are looking for in the search box. Nothing will shown if the search did not specified since the API is used for spesific search only. I will consume another API, such as Now Playing movies to be displayed if the search not specified
+
+#### Live Demo
+Here is the link to see the live demo of this app, https://themoviedb-react.netlify.app/
 
 # Getting Started with Create React App
 
