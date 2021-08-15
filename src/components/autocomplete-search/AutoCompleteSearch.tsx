@@ -51,6 +51,14 @@ class AutoCompleteSearch extends Component<AutoCompleteSearchProps, AutoComplete
     }
   }
 
+  componentDidUpdate = (prevProps: AutoCompleteSearchProps) => {
+    if (prevProps.location.search !== this.props.location.search) {
+      this.setState({
+        query: (qsParse(this.props.location.search) as QuerySearch).query || '',
+      });
+    }
+  }
+
   componentWillUnmount = () => {
     if (this.listener) this.listener.removeEventListener('scroll', this.scrollListener, true);
   }
